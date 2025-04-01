@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="90" fill="#f0f6ff"/>
+  
+  <!-- Medical Clipboard -->
+  <rect x="60" y="50" width="80" height="110" rx="5" ry="5" fill="#fff" stroke="#4e74e6" stroke-width="3"/>
+  <rect x="60" y="50" width="80" height="20" rx="5" ry="5" fill="#4e74e6" stroke="#4e74e6" stroke-width="3"/>
+  <rect x="95" y="50" width="10" height="10" fill="#4e74e6" stroke="#fff" stroke-width="1"/>
+  
+  <!-- Clipboard Content -->
+  <line x1="70" y1="85" x2="130" y2="85" stroke="#ddd" stroke-width="2"/>
+  <line x1="70" y1="100" x2="130" y2="100" stroke="#ddd" stroke-width="2"/>
+  <line x1="70" y1="115" x2="130" y2="115" stroke="#ddd" stroke-width="2"/>
+  <line x1="70" y1="130" x2="130" y2="130" stroke="#ddd" stroke-width="2"/>
+  <line x1="70" y1="145" x2="130" y2="145" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- Checkmark -->
+  <path d="M75 95 L85 105 L105 85" fill="none" stroke="#29bb89" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Stethoscope -->
+  <path d="M140 150 Q160 130 140 110" fill="none" stroke="#4e74e6" stroke-width="4" stroke-linecap="round"/>
+  <path d="M140 110 L100 130" fill="none" stroke="#4e74e6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="95" cy="135" r="8" fill="#4e74e6"/>
+  
+  <!-- Heart Beat Line -->
+  <path d="M70 115 L80 115 L85 100 L95 130 L105 100 L115 115 L130 115" fill="none" stroke="#dc3545" stroke-width="2"/>
+</svg> 

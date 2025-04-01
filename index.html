@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Appointment Scheduler</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-hospital"></i> HealthCare Scheduler</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn">Login</button>
+                <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Book Your Medical Appointment Online</h1>
+                <p>Schedule appointments with your healthcare provider quickly and easily</p>
+                <button id="bookAppointmentBtn" class="btn btn-primary btn-large">Book Appointment Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/doctor.svg" alt="Healthcare Provider">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Scheduler?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Easy Scheduling</h3>
+                    <p>Book, reschedule, or cancel appointments with just a few clicks</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Reminder System</h3>
+                    <p>Get timely notifications and never miss your appointments</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Doctor Selection</h3>
+                    <p>Choose from qualified specialists based on your needs</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access your appointments from any device, anywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="images/general.svg" alt="General Checkup">
+                    <h3>General Checkup</h3>
+                    <p>Regular health check-ups with our general practitioners</p>
+                    <button class="btn">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="img/dental.png" alt="Dental Care">
+                    <h3>Dental Care</h3>
+                    <p>Complete dental services from routine cleaning to advanced procedures</p>
+                    <button class="btn">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="img/cardiolgy.png" alt="Cardiology">
+                    <h3>Cardiology</h3>
+                    <p>Heart health consultations and treatments with cardiology experts</p>
+                    <button class="btn">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="img/pre.png" alt="Pediatrics">
+                    <h3>Pediatrics</h3>
+                    <p>Child healthcare services with our pediatric specialists</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <h2 class="section-title">Our Doctors</h2>
+            <div class="doctor-grid">
+                <div class="doctor-card">
+                    <img src="images/doctor1.jpg" alt="Dr. Raushan Dubey">
+                    <h3>Dr. Raushan Dubey</h3>
+                    <p>Cardiologist</p>
+                    <div class="available-times">
+                        <span>Available: Mon-Fri</span>
+                    </div>
+                    <button class="btn btn-primary">View Profile</button>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor2.jpg" alt="Dr. Sudhanshu">
+                    <h3>Dr. Sudhanshu Singh</h3>
+                    <p>Pediatrician</p>
+                    <div class="available-times">
+                        <span>Available: Mon-Wed</span>
+                    </div>
+                    <button class="btn btn-primary">View Profile</button>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor3.jpg" alt="Dr. Rupali">
+                    <h3>Dr. Rupali </h3>
+                    <p>Dermatologist</p>
+                    <div class="available-times">
+                        <span>Available: Tue-Sat</span>
+                    </div>
+                    <button class="btn btn-primary">View Profile</button>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor4.jpg" alt="Dr. Raj Singh">
+                    <h3>Dr. Raj Singh</h3>
+                    <p>General Practitioner</p>
+                    <div class="available-times">
+                        <span>Available: Mon-Fri</span>
+                    </div>
+                    <button class="btn btn-primary">View Profile</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment" class="appointment">
+        <div class="container">
+            <h2 class="section-title">Book an Appointment</h2>
+            <div class="appointment-container">
+                <div class="appointment-form">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Type</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="general">General Checkup</option>
+                                <option value="dental">Dental Care</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="dermatology">Dermatology</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor">Select Doctor</label>
+                            <select id="doctor" name="doctor" required>
+                                <option value="">Select a doctor</option>
+                                <!-- This will be populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select a time</option>
+                                <!-- This will be populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Schedule Appointment</button>
+                    </form>
+                </div>
+                <div class="appointment-info">
+                    <h3>How It Works</h3>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Select a Service</h4>
+                            <p>Choose the healthcare service you require</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Choose a Doctor</h4>
+                            <p>Select from our list of qualified specialists</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Pick a Date & Time</h4>
+                            <p>Select your preferred appointment slot</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Confirmation</h4>
+                            <p>Receive an email confirmation with appointment details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The appointment scheduler made it so easy to book my regular checkups. No more waiting on the phone!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/patient1.jpg" alt="Sudhanshu">
+                        <h4>Sudhanshu</h4>
+                        <p>Regular Patient</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I love getting reminders before my appointments. Haven't missed a single one since I started using this service."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/patient2.jpg" alt="Abhishek">
+                        <h4>Abhishek</h4>
+                        <p>Regular Patient</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Being able to see all available slots and doctor schedules made finding the right appointment time so much easier!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/patient3.jpg" alt="Sara">
+                        <h4>Sara</h4>
+                        <p>New Patient</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button id="prevTestimonial" class="btn-circle" aria-label="Previous testimonial" title="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextTestimonial" class="btn-circle" aria-label="Next testimonial" title="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <p>The Healthcare Appointment Scheduler is designed to revolutionize the way patients and healthcare providers manage appointments. Our platform creates a seamless, user-friendly experience for booking, tracking, and managing healthcare appointments.</p>
+                <p>We address common pain points such as long wait times, communication gaps, and scheduling inefficiencies to ensure you receive the care you need when you need it.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>5000+</h3>
+                        <p>Patients Served</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Expert Doctors</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="img/health faclity.png" alt="Healthcare Facility">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Our Location</h3>
+                        <p> Healthcare India, Rohtas</p>
+                        <p>Bihar, India 821312</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone Number</h3>
+                        <p>+91 9934898643</p>
+                        <p>Mon-Fri: 8:00 AM - 8:00 PM</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Address</h3>
+                        <p>appointments@healthscheduler.com</p>
+                        <p>support@healthscheduler.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal components for login, signup, and appointment confirmation -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Login</button>
+            </form>
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#" id="showSignupBtn">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" name="signupPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Create Account</button>
+            </form>
+            <div class="modal-footer">
+                <p>Already have an account? <a href="#" id="showLoginBtn">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="confirmation-message">
+                <i class="fas fa-check-circle"></i>
+                <h2>Appointment Scheduled</h2>
+                <p>Your appointment has been successfully scheduled. A confirmation email has been sent to your email address.</p>
+                <div class="appointment-details">
+                    <h3>Appointment Details</h3>
+                    <p><strong>Service:</strong> <span id="confirmService"></span></p>
+                    <p><strong>Doctor:</strong> <span id="confirmDoctor"></span></p>
+                    <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+                    <p><strong>Time:</strong> <span id="confirmTime"></span></p>
+                </div>
+                <button id="closeConfirmationBtn" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-hospital"></i> HealthCare Scheduler</h2>
+                    <p>Your health is our priority</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">General Checkup</a></li>
+                        <li><a href="#">Dental Care</a></li>
+                        <li><a href="#">Cardiology</a></li>
+                        <li><a href="#">Pediatrics</a></li>
+                        <li><a href="#">Dermatology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i>Dehri Healthcare India, Bihar 821312</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 9934898643</li>
+                        <li><i class="fas fa-envelope"></i> appointments@healthscheduler.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Healthcare Appointment Scheduler. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
