@@ -330,4 +330,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', options);
     }
-}); 
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav ul');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) {
+            nav.classList.remove('active');
+        }
+    });
+});

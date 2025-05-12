@@ -1,0 +1,94 @@
+/* Mobile Styles (up to 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header */
+    header .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    /* Features */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Services */
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Doctors */
+    .doctor-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Appointment Form */
+    .appointment-container {
+        flex-direction: column;
+    }
+
+    .appointment-form,
+    .appointment-info {
+        width: 100%;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Tablet Styles (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .feature-grid,
+    .service-grid,
+    .doctor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
